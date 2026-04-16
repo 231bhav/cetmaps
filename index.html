@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CetMaps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<button class="admin-button" onclick="login()">Admin Login</button>
+<div class="hero">
+<h1> Welcome to CetMaps</h1>
+<p> Your go-to platform for the complete map of College of Engineeering Trivandrum</p>
+</div>
+
+<!-- SEARCH BAR -->
+ <div class="search-container">
+<input type="text" id="searchBox" placeholder="Search..." onkeyup="searchFunction()">
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+        </div>
+    </div>        
+</div>   
+</div>    
+
+
+
+<!--event form-->
+<form id="eventForm" style="display:none;">
+    <input type="text" id="eventName" placeholder="Event Name" required>
+    
+    <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Civil">Civil</option>
+        <option value="Architecture">Architecture</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Industrial and Production">Industrial and Production</option>
+        <option value="Common">Common Areas</option>
+    </select>
+
+    <select id="floor">
+        <option value="">Select Floor</option>
+        <option value="Basement">Basement</option>
+        <option value="Ground">Ground</option>
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+        <option value="Third">Third</option>
+    </select>
+
+    <input type="text" id="roomCode" placeholder="Classroom Code" required>
+    <input type="date" id="date" required>
+    <button type="submit">Add Event</button>
+</form>
+<!--locations-->
+
+<div class="section" id="Common">
+<h3>Common Areas</h3>
+<ul class="eventList">
+    <li>College Ground
+        <a href="https://maps.app.goo.gl/TnfoCeeirRymMxx87" target="_blank">📍</a>
+    </li>
+
+    <li>Dhwani Stage
+        <a href="https://maps.app.goo.gl/j8FtYv8bPrNR2hL97" target="_blank">📍</a>
+    </li>
+    <li>Gazebo
+        <a href="https://maps.app.goo.gl/hNVBkWCULc1hfK8T7" target="_blank">📍</a>
+    </li>
+    <li>Library
+        <a href="https://maps.app.goo.gl/wBeKF2kpFBRHuXqK8" target="_blank">📍</a>
+    </li>
+
+    <li>Diamond Jubilee Hall
+        <a href="https://maps.app.goo.gl/Rs9jzhEpLWutXJuJ8" target="_blank">📍</a>
+    </li>
+
+</ul>
+</div>
+
+<!-- mechanical -->
+<div class="section" id="Mechanical">
+<h3>Mechanical<a href="https://maps.app.goo.gl/JRoG9NyjLW6ZDPvB7" target="_blank">📍</a></h3>
+<ul class="eventList">
+    <li>
+        <strong>Main Block</strong>
+        <ul>
+            <li>
+                <strong>Basement</strong>
+                <ul>
+                <li>ME101</li>
+                <li>ME102</li>
+                <li>ME103</li>
+                <li>ME104</li>
+                <li>ME105</li>
+                </ul>
+            </li>
+        
+
+            <li>
+                <strong>Ground</strong>
+                <ul>
+                <li>ME201</li>
+                <li>ME202</li>
+                <li>ME203</li>
+                <li>ME204</li>
+                <li>ME205</li>
+                <li>ME206</li>
+                </ul>  
+             </li>
+
+            <li>
+                <strong>First</strong>
+                <ul>
+                <li>ME301</li>
+                <li>ME302</li>
+                <li>ME303</li>
+                <li>ME304</li>
+                <li>ME305</li>
+                <li>ME306</li>
+                </ul>  
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Workshop<a href="https://maps.app.goo.gl/ofpr2BEb3d9kD5S5A" target="_blank">📍</a></strong>
+        <ul>
+            <li>
+                <strong>Ground</strong>
+                <ul>
+                <li>Machine Shop</li>
+                <li>Fitting</li>
+                <li>Sheet Metal</li>
+                <li>Smithy</li>
+                <li>Welding</li>
+                <li>Foundry</li>
+                <li>Carpentry</li>
+                <li>plumbing</li>
+                </ul>  
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Hydraulics and Flow lab<a href="https://maps.app.goo.gl/W4BJHReTYWhsj9uN6" target="_blank">📍</a></strong>
+        <ul>
+            <li>Flow lab</li>
+            <li>Civil Hydraulics and Flow lab</li>
+            <li>Mechanical Hydraulics and Flow lab</li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+ <!-- electrical -->
+ <div class="section" id="Electrical">
+ <h3>Electrical<a href="https://maps.app.goo.gl/U4vqvLC4RCCiWuSn9" target="_blank">📍</a></h3>
+ <ul class="eventList"> 
+    <li>
+        <strong>Main Block</strong>
+        <ul>
+            <li>   
+                <strong>Basement</strong>
+                 <ul>
+                <li>EEC01</li>
+                <li>EEC02</li>
+                <li>EEC03</li>
+                <li>EEC04</li>
+                <li>EEC05</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Ground</strong>
+                <ul>
+                <li>EE101</li>
+                <li>EE102</li>
+                <li>EE103</li>
+                <li>EE104</li>
+                <li>EE105</li>
+                <li>EE106</li>
+                <li>EE107</li>
+                </ul>  
+            </li>
+
+            
+            <li>
+                <strong>First</strong>
+                <ul>
+                <li>EE201</li>
+                <li>EE202</li>
+                <li>EE203</li>
+                <li>EE204</li>
+                <li>EE205</li>
+                <li>EE206</li>
+                <li>EE207</li>
+                <li>EE208</li>
+                <li>EE209</li>
+                <li>EE210</li>
+                <li>EE211</li>
+                </ul>  
+            </li>
+
+            <li>
+                <strong>Second</strong>
+                <ul>
+                <li>EE301</li>
+                <li>EE302</li>
+                <li>EE303</li>
+                <li>EE304</li>
+                <li>EE305</li>
+                <li>EE306</li>
+                <li>EE307</li>
+                <li>EE308</li>
+                </ul>  
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Machines lab Block</strong>
+        <ul>
+            <li>Electrical machines lab</li>
+            <li>Electrical workshop</li>
+            <li>Drives lab</li>
+            <li>Testing lab 1</li>
+            <li>Testing lab 2</li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+ <!-- civil -->
+ <div class="section" id="Civil">
+ <h3>Civil<a href="https://maps.app.goo.gl/MqcnjYVMPXAfGD3f8" target="_blank">📍</a></h3>
+ <ul class="eventList">
+    <li>
+        <strong>Main Block</strong>
+        <ul>
+            <li>   
+                <strong>Basement</strong>
+                 <ul>
+                <li>CE01</li>
+                <li>CE02</li>
+                <li>CE03</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Ground</strong>
+                <ul>
+                <li>CE101</li>
+                <li>CE102</li>
+                <li>CE103</li>
+                <li>CE104</li>
+                <li>CE105</li>
+                </ul>  
+            </li>
+
+            <li>
+                <strong>First</strong>
+                <ul>
+                <li>CE201</li>
+                <li>CE202</li>
+                <li>CE203</li>
+                <li>CE204</li>
+                </ul>  
+            </li>
+        </ul>
+    </li>
+ </ul>
+ </div>
+
+ <!-- architecture -->
+ <div class="section" id="Architecture">
+ <h3>Architecture <a href="https://maps.app.goo.gl/raPVLZFQp8oEE3BQ6" target="_blank">📍</a></h3>
+ <ul class="eventList">
+
+    <li>
+        <strong>Basement</strong>
+        <ul>
+            <li>AR201</li>
+            <li>AR202</li>
+            <li>AR203</li>
+            <li>AR204</li>
+            <li>AR205</li>
+            <li>AR206</li>
+            <li>AR207</li>
+            <li>AR208</li>
+            <li>AR209</li>
+            <li>AR210</li>
+            <li>AR211</li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Ground</strong>
+        <ul>
+            <li>AR301</li>
+            <li>AR302</li>
+            <li>AR303</li>
+            <li>AR304</li>
+            <li>AR305</li>
+            <li>AR306</li>
+            <li>AR307</li>
+            <li>AR308</li>
+            <li>AR309</li>
+            <li>AR310</li>
+        </ul>  
+    </li>
+
+     <li>
+        <strong>First</strong>
+        <ul>
+            <li>AR401</li>
+            <li>AR402</li>
+            <li>AR403</li>
+            <li>AR404</li>
+            <li>AR405</li>
+            <li>AR406</li>
+            <li>AR407</li>
+            <li>AR408</li>
+            <li>AR409</li>
+            <li>AR410</li>
+            <li>AR411</li>
+        </ul>  
+    </li>
+ </ul>
+ </div>
+
+ <!-- electronics -->
+ <div class="section" id="Electronics">
+ <h3>Electronics <a href="https://maps.app.goo.gl/k7Y7y9Y3eb3qgPWw6" target="_blank">📍</a></h3>
+ <ul class="eventList"> 
+        <li>
+        <strong>Ground</strong>
+        <ul>
+            <li>EC101</li>
+            <li>EC102</li>
+            <li>EC103</li>
+            <li>EC104</li>
+            <li>EC105</li>
+            <li>EC106</li>
+            <li>EC107</li>
+            <li>EC108</li>
+            <li>EC109</li>
+            <li>EC110</li>
+            <li>EC111</li>
+            <li>EC112</li>
+            <li>EC113</li>
+            <li>EC114</li>
+            <li>EC115</li>
+            <li>EC116</li>
+            <li>EC117</li>
+            <li>EC118</li>
+            <li>EC119</li>
+            <li>EC120</li>
+            <li>EC121</li>
+        </ul>  
+    </li>
+
+    <li>
+        <strong>First</strong>
+        <ul>
+            <li>EC201</li>
+            <li>EC202</li>
+            <li>EC203</li>
+            <li>EC204</li>
+            <li>EC205</li>
+            <li>EC206</li>
+            <li>EC207</li>
+            <li>EC208</li>
+            <li>EC209</li>
+            <li>EC210</li>
+            <li>EC211</li>
+            <li>EC212</li>
+            <li>EC213</li>
+            <li>EC214</li>
+            <li>EC215</li>
+            <li>EC216</li>
+            <li>EC217</li>
+            <li>EC218</li>
+            <li>EC219</li>
+            <li>EC220</li>
+            <li>EC221</li>
+        </ul>  
+    </li>
+
+
+</ul>
+</div>
+
+<!-- computer science -->
+ <div class="section" id="Computer Science">
+ <h3>Computer Science<a href="https://maps.app.goo.gl/uTuUwMzKkPer6dk5A" target="_blank">📍</a></h3>
+ <ul class="eventList">
+    <li>
+        <strong>Ground</strong>
+        <ul>
+            <li>CS101</li>
+            <li>CS102</li>
+            <li>CS103</li>
+            <li>CS104</li>
+            <li>CS105</li>
+            <li>CS106</li>
+            <li>CS107</li>
+            <li>CS108</li>
+            <li>CS109</li>
+            <li>CS110</li>
+            <li>CS111</li>
+            <li>CS112</li>
+            <li>CS113</li>
+            <li>CS114</li>
+            <li>CS115</li>
+            <li>CS116</li>
+            <li>CS117</li>
+            <li>CS118</li>
+            <li>CS119</li>
+        </ul>  
+    </li>
+
+    <li>
+        <strong>First</strong>
+        <ul>
+            <li>CS201</li>
+            <li>CS202</li>
+            <li>CS203</li>
+            <li>CS204</li>
+            <li>CS205</li>
+            <li>CS206</li>
+            <li>CS207</li>
+            <li>CS208</li>
+            <li>CS209</li>
+            <li>CS210</li>
+            <li>CS211</li>
+            <li>CS212</li>
+            <li>CS213</li>
+            <li>CS214</li>
+            <li>CS215</li>
+            <li>CS216</li>
+            <li>CS217</li>
+            <li>CS218</li>
+            <li>CS219</li>
+        </ul>  
+    </li>
+
+    <li>
+        <strong>Second</strong>
+        <ul>
+            <li>CS301A</li>
+            <li>CS301B</li>
+            <li>CS302</li>
+            <li>CS303</li>
+            <li>CS304</li>
+            <li>CS305A</li>
+            <li>CS306B</li>
+        </ul>  
+    </li>
+</ul>
+</div>
+
+<!-- industrial and production -->
+<div class="section" id="Industrial and Production">
+<h3>Industrial and Production<a href="https://maps.app.goo.gl/pKNiCKzuVBDk8WD77" target="_blank">📍</a></h3>
+<ul class="eventList"> 
+    <li>
+        <strong>Cellar</strong>
+        <ul>
+            <li>IEC01</li>
+            <li>IEC02</li>
+            <li>IEC03</li>
+        </ul>  
+    </li>
+
+    <li>
+        <strong>Ground</strong>
+        <ul>
+            <li>IE101</li>
+            <li>IE102</li>
+            <li>IE103</li>
+            <li>IE104</li>
+            <li>IE105</li>
+            <li>IE106</li>
+            <li>IE107</li>
+            <li>IE108</li>
+            <li>IE109</li>
+            <li>IE110</li>
+            <li>IE111</li>
+            <li>IE112</li>
+            <li>IE113</li>
+            <li>IE151</li>
+            <li>IE152</li>
+            <li>IE153</li>
+        </ul>  
+    </li> 
+    
+    <li>
+        <strong>First</strong>
+        <ul>
+            <li>IE201</li>
+            <li>IE202</li>
+            <li>IE203</li>
+            <li>IE204</li>
+            <li>IE205</li>
+            <li>IE206</li>
+            <li>IE207</li>
+            <li>IE208</li>
+            <li>IE209</li>
+            <li>IE210</li>
+            <li>IE251</li>
+            <li>IE252</li>
+            <li>IE253</li>
+            <li>IE254</li>
+            <li>IE255</li>
+        </ul>  
+    </li>
+    
+</ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
